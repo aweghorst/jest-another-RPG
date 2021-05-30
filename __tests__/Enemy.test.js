@@ -1,4 +1,3 @@
-const { test, expect } = require("@jest/globals");
 const Enemy = require("../lib/Enemy.js");
 const Potion = require("../lib/Potion.js");
 
@@ -54,9 +53,9 @@ test("subtracts from enemy's health", () => {
   expect(enemy.health).toBe(0);
 });
 
-test('gets a description of the enemy', () => {
-  const enemy = new Enemy('goblin', 'sword');
+test("gets a description of the enemy", () => {
+  const enemy = new Enemy("goblin", "sword");
 
-  expect(enemy.getDescription()).toEqual(expect.stringContaining('goblin'));
-  expect(enemy.getDescription()).toEqual(expect.stringContaining('sword'));
+  expect(enemy.getDescription()).toEqual(expect.stringContaining("goblin"));
+  expect(enemy.getDescription()).toEqual(expect.stringContaining("sword"));
 });
